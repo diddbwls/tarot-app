@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>내일 타로 운세 🔮</title>
+  <meta name="description" content="내일의 아침·점심·저녁 운세를 타로 카드로 알아보세요." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="stars"></div>
+    <h1>🔮 내일 운세 타로</h1>
+    <p class="subtitle" id="dateBadge"></p>
+  </header>
+
+  <!-- SELECTION BAR -->
+  <div class="selection-bar">
+    <div class="selection-slots">
+      <div class="sel-slot" id="sel0"><span>아침 🌅</span></div>
+      <div class="sel-slot" id="sel1"><span>점심 ☀️</span></div>
+      <div class="sel-slot" id="sel2"><span>저녁 🌙</span></div>
+    </div>
+    <div class="bar-btns">
+      <button class="btn-shuffle" id="shuffleBtn">🔀 셔플</button>
+      <button class="btn-confirm" id="confirmBtn" disabled>✨ 결과 보기</button>
+    </div>
+  </div>
+
+  <!-- CARD GRID -->
+  <main>
+    <div class="card-grid" id="cardGrid"></div>
+  </main>
+
+  <!-- POPUP OVERLAY -->
+  <div class="popup-overlay" id="popupOverlay" hidden>
+    <div class="popup-card" id="popupCard">
+      <div class="popup-emoji" id="popupEmoji"></div>
+      <div class="popup-name" id="popupName"></div>
+      <div class="popup-keywords" id="popupKeywords"></div>
+      <div class="popup-actions">
+        <button class="btn-select" id="popupSelectBtn">선택하기</button>
+        <button class="btn-cancel" id="popupCancelBtn">닫기</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESULT MODAL -->
+  <div class="result-overlay" id="resultOverlay" hidden>
+    <div class="result-modal">
+      <h2>✨ 내일의 타로 운세</h2>
+      <div class="result-cards" id="resultCards"></div>
+      <div class="result-summary" id="resultSummary"></div>
+      <button class="btn-restart" id="restartBtn">🔄 다시 뽑기</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
